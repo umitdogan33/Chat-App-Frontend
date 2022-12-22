@@ -1,0 +1,38 @@
+  <div class="main-div">
+    <div class="back-div" *ngIf="isLoaded">
+      <div style="font-weight: bold; font-size: large; border-bottom: 1px solid #dfe4ec; margin-bottom: 10px;">{{user.username}}</div>
+      <div #scrollMe style="overflow-y:scroll; overflow-x: hidden; height:400px;">
+        <div *ngFor="let i of messages"> 
+            <div *ngIf="deneme(i)" style="width: 100%; justify-content: end; display: flex; word-break: break-word;">
+              <p *ngIf="!checkPhoto(i)" class="message-box ozel" style="background-color: rgba(163,224,225,.5); margin: 0 !important; color: black !important; word-break: break-word;">{{i.message}}</p>
+              <img class="chat-img" *ngIf="checkPhoto(i)" src="https://chatapp849.azurewebsites.net/Files/72bbb80e-5b08-4d69-bd27-a4ee493baa6f.png">
+            </div> 
+          <div *ngIf="deneme2(i)" style="width: 100%; justify-content: start; display: flex; word-break: break-word;">
+            <p *ngIf="!checkPhoto(i)" class="message-box" style="background-color: #e4e8ed; margin: 0 !important; color: black !important;">{{i.message}}</p>
+            <img class="chat-img" *ngIf="checkPhoto(i)" src="https://chatapp849.azurewebsites.net/Files/72bbb80e-5b08-4d69-bd27-a4ee493baa6f.png">
+        </div>
+      </div>
+      </div>
+      
+        
+      <div class="cp1" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <form [formGroup]="imageForm">
+          <input #fileBox style="display: none;" type="file" id="file-input" (change)="onChange($event)">
+          <!-- <button (click)="zort()">he</button> -->
+        </form>
+        <div style="display: flex; flex-direction: row;">
+          <label for="file-input">
+            <i class="bi bi-paperclip" style="font-size: 2rem;"></i>
+          </label>
+          <div>
+            <input multiple style="height: 40px;" pInputText #box (keyup.enter)="sendMessage(box,fileBox)" [(ngModel)]="mainText" type="text">
+            <button style="height: 40px;" pButton pRipple (click)="sendMessage(box,fileBox)">Send Message</button>
+    
+          </div>  
+        </div>
+        <div *ngIf="imageSrc.length > 1 || imageSrc != null">
+          <img *ngFor="let i of imageSrc" style="width: 100px; height: 100px;" src="{{i}}">
+        </div>
+      </div>
+    </div>
+  </div>

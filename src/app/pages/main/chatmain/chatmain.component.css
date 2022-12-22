@@ -1,0 +1,86 @@
+.icon{
+    font-size: 2rem;
+    position: fixed;
+    top: 50%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin-left: 2vw;
+    cursor: pointer;
+  }
+
+  .main-div{
+    display: flex;
+    justify-content: center;
+  }
+
+  .contact{
+    height: 500px;
+    background-color: white;
+    width: 100px;
+    border-right: 0.2px solid grey;
+  }
+
+  .back-div{
+   background-color: white;
+    width: 80%;
+    min-width: 100px;
+    max-width: 600px;
+  }
+
+  .cp1{
+    display: flex;
+    justify-content: center;
+  }
+
+  .message-box{
+    border-radius: 10px;
+    max-width: 200px;
+    padding-right: 10px;
+    min-height: 2rem;
+
+  }
+
+  .ozel{
+    padding-right: 0px !;
+    padding-left: 10px !important;
+  }
+
+  .chat-img{
+    height: 10vw;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+  @media screen and (max-width:460px){
+    .main-div{
+      flex-direction: column !important;
+    }
+  }
+
+  @media screen and (max-width:600px){
+    .back-div{
+      width: 100% !important;
+    }
+
+    .chat-img{
+      height: 20vh !important;
+    }
+  }

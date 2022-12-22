@@ -1,0 +1,84 @@
+<div class="modal fade" id="loginModal2" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="loginModalLabel">New message</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-body p-5 pt-0">
+            <form [formGroup]="registerForm">
+              <div class="form-floating mb-3">
+                <input formControlName="email" type="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Email address</label>
+              </div>
+  
+              <div class="form-floating mb-3">
+                <input formControlName="firstName" type="text" class="form-control rounded-3" id="floatingInput" placeholder="jhon">
+                <label for="floatingInput">First Name</label>
+              </div>
+              
+              <div class="form-floating mb-3">
+                <input formControlName="lastName" type="text" class="form-control rounded-3" id="floatingPassword" placeholder="baker">
+                <label for="floatingPassword">Last Name</label>
+              </div>
+  
+              <div class="form-floating mb-3">
+                <input formControlName="userName" type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">UserName</label>
+              </div>
+  
+              <div class="form-floating mb-3">
+                <input formControlName="password" type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Password</label>
+              </div>
+  
+              <div class="form-floating mb-3">
+                <input formControlName="confirmPassword" type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Confirm Password</label>
+              </div>
+  
+              <button style="background-color: #0d6efd; border-color: #0d6efd; text-align: center; color: white;" type="button" data-bs-toggle="modal" data-bs-target="#usernameModal" data-bs-whatever="@getbootstrap" class="dropdown-item w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Sign up</button>
+              <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
+              <hr class="my-4">
+              <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
+              <asl-google-signin-button></asl-google-signin-button>
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>  
+
+
+
+  <div class="modal fade" id="usernameModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" id="loginModalContent">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="loginModalLabel">Login</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-body p-5 pt-0">
+            <form [formGroup]="registerForm">
+              <div class="form-floating mb-3">
+                <input formControlName="userName" type="text" class="form-control rounded-3" id="floatingInput" formControlName="userName">
+                <label for="floatingInput">Username</label>
+              </div>
+              <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit" (click)="Register()">Sign up</button>
+              <small class="text-muted">DON'T FORGET! Choose a different name to be different from everyone else!
+              </small>
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

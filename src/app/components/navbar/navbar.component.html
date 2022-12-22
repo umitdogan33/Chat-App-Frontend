@@ -1,0 +1,78 @@
+<app-logindialog></app-logindialog>
+<app-registerdialog></app-registerdialog>
+<app-old-contact-dialog></app-old-contact-dialog>
+<nav>
+  <div class="main_nav" style="height: 40px">
+    <p class="desc" style="user-select: none">CHAT-APP</p>
+    <div class="auth_main">
+      <p
+        class="auth1"
+        data-bs-toggle="modal"
+        data-bs-target="#loginModal"
+        data-bs-whatever="@getbootstrap"
+        *ngIf="control()"
+        style="color: black !important;">
+        Login
+      </p>
+      <p
+        class="auth2"
+        data-bs-toggle="modal"
+        data-bs-target="#loginModal2"
+        data-bs-whatever="@getbootstrap"
+        *ngIf="control()"
+        style="color: black !important;"
+      >
+        Register
+      </p>
+    </div>
+    <div class="btn-group drop-btn">
+      <a
+        href="#"
+        class="d-block link-dark text-decoration-none dropdown-toggle"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <img
+          *ngIf="!control()"
+          src="https://github.com/mdo.png"
+          alt="mdo"
+          width="32"
+          height="32"
+          class="rounded-circle"
+        />
+        <i
+          *ngIf="control()"
+          class="bi bi-list x"
+          style="font-size: 2rem; color: black !important; display: none;"
+        ></i>
+      </a>
+      <ul class="dropdown-menu">
+        <li
+          data-bs-toggle="modal"
+          data-bs-target="#loginModal"
+          data-bs-whatever="@getbootstrap"
+          class="dropdown-item"
+          *ngIf="control()"
+        >
+          Login
+        </li>
+        <li
+          data-bs-toggle="modal"
+          data-bs-target="#loginModal2"
+          data-bs-whatever="@getbootstrap"
+          class="dropdown-item"
+          *ngIf="control()"
+        >
+          Register
+        </li>
+
+        <li class="dropdown-item" *ngIf="control() == false" routerLink="main/profile">Profile</li>
+
+        <li class="dropdown-item" *ngIf="control() == false">Friends</li>
+
+        <li class="dropdown-item" data-bs-toggle="modal" data-bs-target="#oldcontactmodal" *ngIf="control() == false">Old Chats</li>
+        <li class="dropdown-item" *ngIf="control() == false">Star Chats</li>
+      </ul>
+    </div>
+  </div>
+</nav>

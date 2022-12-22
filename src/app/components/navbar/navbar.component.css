@@ -1,0 +1,48 @@
+.main_nav{
+   height: 2rem;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.auth_main{
+   display: flex;
+   flex-direction: row;
+}
+ 
+
+.auth1{
+   padding-right: 3vw;
+   font-size: medium;
+   font-weight: 600;
+   cursor: pointer;
+}
+
+.auth2{
+   padding-right: 5vw;
+   font-size: medium;
+   font-weight: 600;
+   cursor: pointer;
+}
+
+
+
+p{
+   margin-bottom: 0 !important;
+}
+
+@media screen and (max-width: 600px) {
+
+   .auth1{
+      display: none !important;
+   }
+
+   .auth2{
+      display: none !important;
+   }
+
+   .x{
+      display: flex !important;
+   }
+ }

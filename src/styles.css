@@ -1,0 +1,14 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+body{
+  background-color: rgb(245, 245, 245) !important;
+}
+
+
+p{
+  color: white !important;
+}
+
+a{
+  color: white !important;
+}

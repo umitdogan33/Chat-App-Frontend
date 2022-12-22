@@ -1,0 +1,14 @@
+.user-img {
+  height: 4rem;
+  border-radius: 50%;
+  max-height: 500px;
+}
+
+.user-usnm {
+  display: flex;
+  align-items: center;
+}
+.main{
+  display: flex;
+  margin-bottom: 4rem;
+}
