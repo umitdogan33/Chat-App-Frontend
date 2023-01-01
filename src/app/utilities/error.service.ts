@@ -15,7 +15,7 @@ export class ErrorService {
       });
       return;
      }
-     this.toastrService.error(error.error.message?? 'Internal Server Error');
+     this.toastrService.error(error.error.Detail?? 'Internal Server Error');
 
      
    }

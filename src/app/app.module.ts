@@ -29,6 +29,7 @@ import { MyprofileComponent } from './pages/main/myprofile/myprofile.component';
 import { StatusdialogComponent } from './components/statusdialog/statusdialog.component';
 import { WelcomepageComponent } from './pages/main/welcomepage/welcomepage.component';
 import { ProfilephotodialogComponent } from './components/profilephotodialog/profilephotodialog.component';
+import { FriendsComponent } from './pages/main/friends/friends.component';
 
 
 
@@ -47,7 +48,8 @@ import { ProfilephotodialogComponent } from './components/profilephotodialog/pro
     MyprofileComponent,
     StatusdialogComponent,
     WelcomepageComponent,
-    ProfilephotodialogComponent
+    ProfilephotodialogComponent,
+    FriendsComponent
   ],
   imports: [
     BrowserModule,
